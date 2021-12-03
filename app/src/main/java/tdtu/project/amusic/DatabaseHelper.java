@@ -1,5 +1,6 @@
 package tdtu.project.amusic;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -35,5 +36,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Create a new one
         onCreate(sqLiteDatabase);
+    }
+
+    public void addSong(Music music) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(SONG_ID, music.getId());
+        values.put(SONG_NAME, music.getName());
+        values.put(SONG_IMAGE, music.getImage());
+        values.put(SONG_PLAYLIST, music.getPlaylist());
+
+        db.insert(MUSIC_TABLE, null, values);
+        db.close();
     }
 }
