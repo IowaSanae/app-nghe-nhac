@@ -9,8 +9,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="353dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="356dp"
         android:text="Personal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
