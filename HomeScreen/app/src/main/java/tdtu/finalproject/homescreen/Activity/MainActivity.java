@@ -22,9 +22,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nevigation);
-        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem item) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment selectedFragment = null;
 
                 switch (item.getItemId()) {
@@ -38,15 +39,15 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = new Fragment_Personal();
                         break;
                 }
-
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         selectedFragment).commit();
 
+                return true;
             }
         });
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new Fragment_Home()).commit();
+                new Fragment_Home()).addToBackStack(null).commit();
 
     }
 }
