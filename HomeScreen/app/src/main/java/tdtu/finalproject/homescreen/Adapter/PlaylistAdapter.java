@@ -1,6 +1,7 @@
 package tdtu.finalproject.homescreen.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import tdtu.finalproject.homescreen.Activity.SongListActivity;
 import tdtu.finalproject.homescreen.Model.Playlist;
 import tdtu.finalproject.homescreen.R;
 
@@ -54,6 +56,15 @@ public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.ViewHo
             super(itemView);
             imagePlaylist = itemView.findViewById(R.id.imageViewPlaylist);
             txtPlaylistTitle = itemView.findViewById(R.id.txtPlaylistTitle);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context, SongListActivity.class);
+                    intent.putExtra("itemplaylist", arrayPlaylist.get(getPosition()));
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }

@@ -3,8 +3,12 @@ package tdtu.finalproject.homescreen.Service;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import tdtu.finalproject.homescreen.Model.Playlist;
+import tdtu.finalproject.homescreen.Model.Song;
 
 public interface Dataservice {
     @GET("playlist.php")
@@ -24,4 +28,8 @@ public interface Dataservice {
 
     @GET("playlistArtist.php")
     Call<List<Playlist>> getPlaylistArtist();
+
+    @FormUrlEncoded
+    @POST("songlist.php")
+    Call<List<Song>> getSongList(@Field("idPlaylist") String idPlaylist);
 }

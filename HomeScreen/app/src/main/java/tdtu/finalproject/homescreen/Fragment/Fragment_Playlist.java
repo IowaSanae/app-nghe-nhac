@@ -1,10 +1,12 @@
 package tdtu.finalproject.homescreen.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,6 +21,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import tdtu.finalproject.homescreen.Activity.SongListActivity;
 import tdtu.finalproject.homescreen.Adapter.PlaylistAdapter;
 import tdtu.finalproject.homescreen.Model.Playlist;
 import tdtu.finalproject.homescreen.R;
