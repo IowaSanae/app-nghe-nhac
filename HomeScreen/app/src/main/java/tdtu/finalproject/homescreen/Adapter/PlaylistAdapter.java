@@ -57,13 +57,10 @@ public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.ViewHo
             imagePlaylist = itemView.findViewById(R.id.imageViewPlaylist);
             txtPlaylistTitle = itemView.findViewById(R.id.txtPlaylistTitle);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(context, SongListActivity.class);
-                    intent.putExtra("itemplaylist", arrayPlaylist.get(getPosition()));
-                    context.startActivity(intent);
-                }
+            itemView.setOnClickListener(view -> {
+                Intent intent = new Intent(context, SongListActivity.class);
+                intent.putExtra("itemplaylist", arrayPlaylist.get(getAdapterPosition()));
+                context.startActivity(intent);
             });
         }
     }

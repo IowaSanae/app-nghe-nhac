@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeScreen">
         <activity
+            android:name=".Activity.MusicPlayerActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.SongListActivity"
             android:exported="true" />
         <activity

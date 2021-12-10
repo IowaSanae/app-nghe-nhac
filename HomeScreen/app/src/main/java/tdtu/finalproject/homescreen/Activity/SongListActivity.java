@@ -1,5 +1,6 @@
 package tdtu.finalproject.homescreen.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -20,7 +21,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -61,13 +61,13 @@ public class SongListActivity extends AppCompatActivity {
 
         init1();
 
-        if(playlist != null && !playlist.getName().equals("")) {
+        if (playlist != null && !playlist.getName().equals("")) {
             setValueInView(playlist.getName(), playlist.getImage());
-            GetDataPlaylist(playlist.getIdPlaylist());
+            getDataPlaylist(playlist.getIdPlaylist());
         }
     }
 
-    private void GetDataPlaylist(String idplaylist) {
+    private void getDataPlaylist(String idplaylist) {
         Dataservice dataservice = APIService.getService();
         Call<List<Song>> callback = dataservice.getSongList(idplaylist);
         callback.enqueue(new Callback<List<Song>>() {
@@ -77,6 +77,7 @@ public class SongListActivity extends AppCompatActivity {
                 songListAdapter = new SongListAdapter(SongListActivity.this, arraySong);
                 recyclerSongList.setLayoutManager(new LinearLayoutManager(SongListActivity.this));
                 recyclerSongList.setAdapter(songListAdapter);
+                eventOnClick();
             }
 
             @Override
@@ -93,8 +94,6 @@ public class SongListActivity extends AppCompatActivity {
             Bitmap bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
             BitmapDrawable bitmapDrawable = new BitmapDrawable(getResources(), bitmap);
             collapsingToolbarLayout.setBackground(bitmapDrawable);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -104,24 +103,29 @@ public class SongListActivity extends AppCompatActivity {
     private void init1() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        toolbar.setNavigationOnClickListener(view -> finish());
         collapsingToolbarLayout.setExpandedTitleColor(Color.WHITE);
         collapsingToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
-
+        floatingActionButton.setEnabled(false);
     }
 
     private void DataIntent() {
         Intent intent = getIntent();
-        if (intent != null){
-            if(intent.hasExtra("itemplaylist")){
-                playlist = (Playlist) intent.getSerializableExtra("itemplaylist");
-            }
-
+        if (intent != null && intent.hasExtra("itemplaylist")) {
+            playlist = (Playlist) intent.getSerializableExtra("itemplaylist");
         }
+    }
+
+    /**
+     * Lớp này truyền dữ liệu đến MusicPlayerActivity
+     * khi người dùng bấm vào một bài hát.
+     */
+    private void eventOnClick() {
+        floatingActionButton.setEnabled(true);
+        floatingActionButton.setOnClickListener(view -> {
+            Intent intent = new Intent(SongListActivity.this, MusicPlayerActivity.class);
+            intent.putExtra("Songs", arraySong);
+            startActivity(intent);
+        });
     }
 }
