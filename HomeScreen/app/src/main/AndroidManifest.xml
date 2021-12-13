@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeScreen">
         <activity
+            android:name=".Login.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.MusicPlayerActivity"
             android:exported="false" />
         <activity
