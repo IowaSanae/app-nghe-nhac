@@ -20,7 +20,7 @@
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/ivSongImage"
         android:text="Song Name"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"/>
     <TextView
         android:id="@+id/tvSearchArtistName"
@@ -34,14 +34,14 @@
         android:layout_toEndOf="@+id/ivSongImage"
         android:layout_below="@id/tvSearchSongName"
         android:text="Artist Name"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="14sp"/>
 
     <ImageView
         android:id="@+id/ivLikes"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@drawable/black_outline_heart"
+        android:src="@drawable/white_heart"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="15dp"/>

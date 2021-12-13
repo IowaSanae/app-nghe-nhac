@@ -12,6 +12,7 @@
     android:theme="@style/ThemeOverlay.AppCompat">
 
     <androidx.appcompat.widget.Toolbar
+        style="?android:attr/textColorTertiary"
         android:id="@+id/ToolbarMusicPlayerScreen"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
