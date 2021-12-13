@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1037369491257",
+    "project_id": "homescreen-362d7",
+    "storage_bucket": "homescreen-362d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037369491257:android:b46d31ad6c504a4f7232e8",
+        "android_client_info": {
+          "package_name": "tdtu.finalproject.homescreen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1037369491257-25f2vrjmuenalgr0g83jolm02h0n59fk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAy5w6Hjg_z51hmchA6Q96E1IAwymqCPUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1037369491257-25f2vrjmuenalgr0g83jolm02h0n59fk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
