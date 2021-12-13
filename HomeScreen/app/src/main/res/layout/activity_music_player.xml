@@ -8,12 +8,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.MusicPlayerActivity"
-    android:background="#000000">
+    android:background="#000000"
+    android:theme="@style/ThemeOverlay.AppCompat">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/ToolbarMusicPlayerScreen"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.viewpager.widget.ViewPager
@@ -87,7 +89,7 @@
             android:gravity="center">
 
             <ImageButton
-                android:id="@+id/shuffleButton"
+                android:id="@+id/btnShuffle"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginRight="10dp"
@@ -96,7 +98,7 @@
                 android:src="@drawable/shuffle" />
 
             <ImageButton
-                android:id="@+id/previousButton"
+                android:id="@+id/btnPrevious"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
@@ -106,7 +108,7 @@
                 android:src="@drawable/previous" />
 
             <ImageButton
-                android:id="@+id/playButton"
+                android:id="@+id/btnPlay"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
@@ -116,7 +118,7 @@
                 android:src="@drawable/play" />
 
             <ImageButton
-                android:id="@+id/fastForwardButton"
+                android:id="@+id/btnFastForward"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
@@ -126,7 +128,7 @@
                 android:src="@drawable/fast_forward" />
 
             <ImageButton
-                android:id="@+id/repeatButton"
+                android:id="@+id/btnRepeat"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"

@@ -22,7 +22,7 @@ import tdtu.finalproject.homescreen.R;
 public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.ViewHolder>{
 
     Context context;
-    ArrayList<Playlist> arrayPlaylist;
+    ArrayList<Playlist> arrayPlaylist = new ArrayList<>();
 
     public PlaylistAdapter(Context context, ArrayList<Playlist> arrayPlaylist){
         this.context = context;

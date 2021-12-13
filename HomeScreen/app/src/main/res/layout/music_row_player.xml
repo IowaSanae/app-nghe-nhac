@@ -13,28 +13,36 @@
             android:layout_height="wrap_content"
             android:text="1"
             android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:layout_margin="10dp"
+            android:textSize="18sp" />
         <TextView
             android:id="@+id/tvSongName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/tvMusicPlayer"
+            android:layout_toRightOf="@+id/tvIdSong"
+            android:layout_toEndOf="@+id/tvIdSong"
             android:ellipsize="end"
             android:maxWidth="300dp"
             android:singleLine="true"
             android:text="Song Name"
             android:textColor="#FFFFFF"
+            android:layout_marginLeft="15dp"
             android:textSize="16sp"/>
+
         <TextView
             android:id="@+id/tvArtistName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/tvMusicPlayer"
+            android:layout_below="@+id/tvSongName"
+            android:layout_toRightOf="@+id/tvIdSong"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="10dp"
             android:ellipsize="end"
             android:maxWidth="300dp"
             android:singleLine="true"
             android:text="Artist Name"
             android:textColor="#FFFFFF"
-            android:textSize="13sp"/>
+            android:textSize="14sp" />
     </RelativeLayout>
 </RelativeLayout>

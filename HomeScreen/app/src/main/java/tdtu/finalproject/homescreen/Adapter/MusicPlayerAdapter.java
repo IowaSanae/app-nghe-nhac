@@ -26,7 +26,7 @@ public class MusicPlayerAdapter extends RecyclerView.Adapter<MusicPlayerAdapter.
 
     @NonNull
     @Override
-    public MusicPlayerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.music_row_player, parent, false);
         return new ViewHolder(view);
@@ -36,13 +36,13 @@ public class MusicPlayerAdapter extends RecyclerView.Adapter<MusicPlayerAdapter.
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Song song = arraySong.get(position);
         holder.artistName.setText(song.getArtist());
-        holder.musicPlayer.setText(song.getIdSong());
+        holder.musicPlayer.setText(position + 1 + "");
         holder.songName.setText(song.getSongName());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return arraySong.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

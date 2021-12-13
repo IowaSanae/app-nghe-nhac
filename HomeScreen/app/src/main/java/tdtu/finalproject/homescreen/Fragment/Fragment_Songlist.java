@@ -26,7 +26,8 @@ public class Fragment_Songlist extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @NonNull Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_songlist, container, false);
         recycler = view.findViewById(R.id.recyclerViewFragmentSonglist);
-        if (MusicPlayerActivity.arraySong.size() > 0) {
+
+        if (!MusicPlayerActivity.arraySong.isEmpty()) {
             musicPlayerAdapter = new MusicPlayerAdapter(getActivity(), MusicPlayerActivity.arraySong);
             recycler.setLayoutManager(new LinearLayoutManager(getActivity()));
             recycler.setAdapter(musicPlayerAdapter);

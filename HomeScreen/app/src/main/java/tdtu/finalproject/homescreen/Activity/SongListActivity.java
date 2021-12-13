@@ -13,6 +13,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -51,6 +52,8 @@ public class SongListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song_list);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
         DataIntent();
         coordinatorLayout = findViewById(R.id.coordinatorlayout);
         collapsingToolbarLayout = findViewById(R.id.collapsingtoolbar);
@@ -116,10 +119,6 @@ public class SongListActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * Lớp này truyền dữ liệu đến MusicPlayerActivity
-     * khi người dùng bấm vào một bài hát.
-     */
     private void eventOnClick() {
         floatingActionButton.setEnabled(true);
         floatingActionButton.setOnClickListener(view -> {
