@@ -57,7 +57,7 @@ public class SignUpActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(!task.isSuccessful()){
-                                Toast.makeText(SignUpActivity.this, "Sign Up Failed, try again!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpActivity.this, "Sign Up Fail, try again!", Toast.LENGTH_SHORT).show();
                             } else{
                                 startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
                             }
@@ -65,7 +65,7 @@ public class SignUpActivity extends AppCompatActivity {
                     });
                 }
                 else {
-                    Toast.makeText(SignUpActivity.this, "An Error Occurred !!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Error Occurred !!!", Toast.LENGTH_SHORT).show();
                 }
             }
         });

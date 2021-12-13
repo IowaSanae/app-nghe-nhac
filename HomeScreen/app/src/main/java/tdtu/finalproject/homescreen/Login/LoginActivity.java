@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
                 if (mFirebaseUser != null){
-                    Toast.makeText(LoginActivity.this, "You have logged in", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "You are logged in", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                     startActivity(i);
                 } else {
@@ -122,7 +122,7 @@ public class LoginActivity extends AppCompatActivity {
                     });
                 }
                 else {
-                    Toast.makeText(LoginActivity.this, "An Error Occurred !!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Error Occurred !!!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
