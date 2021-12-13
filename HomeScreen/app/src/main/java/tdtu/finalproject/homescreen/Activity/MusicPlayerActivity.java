@@ -224,7 +224,6 @@ public class MusicPlayerActivity extends AppCompatActivity {
         startTime = findViewById(R.id.tvStartTime);
         endTime = findViewById(R.id.tvEndTime);
         songDuration = findViewById(R.id.seekBar);
-        likeButton = findViewById(R.id.likeButton);
         shuffleButton = findViewById(R.id.btnShuffle);
         previousButton = findViewById(R.id.btnPrevious);
         playButton = findViewById(R.id.btnPlay);

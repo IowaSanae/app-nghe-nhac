@@ -4,15 +4,22 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import tdtu.finalproject.homescreen.Model.Song;
 import tdtu.finalproject.homescreen.R;
+import tdtu.finalproject.homescreen.Service.APIService;
+import tdtu.finalproject.homescreen.Service.Dataservice;
 
 public class MusicPlayerAdapter extends RecyclerView.Adapter<MusicPlayerAdapter.ViewHolder> {
 
@@ -54,7 +61,6 @@ public class MusicPlayerAdapter extends RecyclerView.Adapter<MusicPlayerAdapter.
             musicPlayer = itemView.findViewById(R.id.tvIdSong);
             songName = itemView.findViewById(R.id.tvSongName);
             artistName = itemView.findViewById(R.id.tvArtistName);
-
         }
     }
 }
