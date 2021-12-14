@@ -61,6 +61,7 @@ import android.widget.Toast;
 public class Fragment_Personal extends Fragment {
     View view;
     Button btnLogin;
+    Button btnLoginFB;
 
 
     @Nullable
@@ -76,6 +77,15 @@ public class Fragment_Personal extends Fragment {
                 Intent i = new Intent(getActivity(), LoginActivity.class);
                 startActivity(i);
 
+            }
+        });
+
+        btnLoginFB = view.findViewById(R.id.btnLoginFB);
+        btnLoginFB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent fbPage = new Intent(getActivity(), FBLoginActivity.class);
+                startActivity(fbPage);
             }
         });
         return view;
