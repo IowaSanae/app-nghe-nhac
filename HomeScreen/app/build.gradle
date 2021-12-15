@@ -43,6 +43,8 @@ dependencies {
     //Import firebase
     implementation platform('com.google.firebase:firebase-bom:29.0.1')
     implementation 'com.google.firebase:firebase-analytics'
+    //Import fb sdk
+    implementation 'com.facebook.android:facebook-android-sdk:[8,9)'
     dependencies {
         implementation 'me.relex:circleindicator:1.2.2@aar'
     }
