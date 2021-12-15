@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7be1873-a378-416c-afea-e46296ccfceb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/HomeScreen/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/app/src/main/java/tdtu/finalproject/homescreen/Fragment/Fragment_Personal.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/app/src/main/java/tdtu/finalproject/homescreen/Fragment/Fragment_Personal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/app/src/main/res/layout/activity_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/app/src/main/res/layout/activity_sign_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/app/src/main/res/layout/activity_sign_up.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/app/src/main/res/layout/fragment_personal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/app/src/main/res/layout/fragment_personal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeScreen/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen/app/src/main/res/values/strings.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e7be1873-a378-416c-afea-e46296ccfceb" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +23,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e7be1873-a378-416c-afea-e46296ccfceb" name="Default Changelist" comment="" />

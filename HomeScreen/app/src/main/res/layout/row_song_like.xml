@@ -15,6 +15,7 @@
         android:scaleType="fitXY" />
     <TextView
         android:text="Song name"
+        android:textStyle="bold"
         android:textSize="18sp"
         android:textColor="#363636"
         android:ellipsize="end"
@@ -27,7 +28,7 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:textColor="#8c8a8a"
+        android:textColor="#ffffff"
         android:textSize="18sp"
         android:text="Artist"
         android:singleLine="true"

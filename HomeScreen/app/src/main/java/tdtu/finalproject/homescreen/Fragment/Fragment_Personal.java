@@ -15,8 +15,6 @@ import tdtu.finalproject.homescreen.Login.FBLoginActivity;
 import tdtu.finalproject.homescreen.Login.LoginActivity;
 import tdtu.finalproject.homescreen.R;
 
-//Test CODE
-//Test CODE
 
 public class Fragment_Personal extends Fragment {
     View view;
