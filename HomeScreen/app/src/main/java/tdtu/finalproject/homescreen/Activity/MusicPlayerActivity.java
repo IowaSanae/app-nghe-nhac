@@ -12,7 +12,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -316,7 +315,7 @@ public class MusicPlayerActivity extends AppCompatActivity {
         handler1.postDelayed(new Runnable() {
             @Override
             public void run() {
-                if (next == true) {
+                if (next) {
                     if (position < (arraySong.size())) {
                         playButton.setImageResource(R.drawable.pause);
                         position += 1;

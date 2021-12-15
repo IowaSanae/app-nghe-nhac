@@ -14,7 +14,6 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.view.View;
 import android.widget.ImageView;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
