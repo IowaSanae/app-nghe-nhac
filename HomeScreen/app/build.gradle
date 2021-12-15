@@ -45,6 +45,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     //Import fb sdk
     implementation 'com.facebook.android:facebook-android-sdk:[8,9)'
+    // ViewPagers
     dependencies {
         implementation 'me.relex:circleindicator:1.2.2@aar'
     }
