@@ -1,9 +1,7 @@
 package tdtu.finalproject.homescreen.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
 import tdtu.finalproject.homescreen.R;
 import androidx.annotation.NonNull;
 

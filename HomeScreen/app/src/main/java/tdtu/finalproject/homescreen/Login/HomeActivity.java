@@ -63,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
-    //SET TIME COLOR
+    //SET COLOR ANIMATION
     @Override
     protected void onResume() {
         super.onResume();
